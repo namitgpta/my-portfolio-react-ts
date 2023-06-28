@@ -1,0 +1,74 @@
+[
+    {
+        "id": "Skills",
+        "value": [
+            {
+                "span": "Devops & SRE",
+                "value": "Infrastructure Development, Operations & Reliability"
+            },
+            {
+                "span": "Web Development",
+                "value": "MERN Stack"
+            },
+            {
+                "span": "App Development",
+                "value": "Building Android Apps using Java in Android Studio"
+            },
+            {
+                "span": "DSA",
+                "value": "Problem Solving using Data Structures & Algorithms"
+            },
+            {
+                "span": "Programming Languages",
+                "value": "C, C++, Java, Python, JS, Go"
+            }
+        ]
+    },
+    {
+        "id": "Experience",
+        "value": [
+            {
+                "span": "09/2022 - Present",
+                "value": "MTS Intern at BYJU'S (Devops & SRE Team)"
+            },
+            {
+                "span": "03/2021 - 05/2021",
+                "value": "Open Source Developer at GirlScript Summer of Code"
+            },
+            {
+                "span": "10/2020 - 03/2021",
+                "value": "R&D Intern at Samsung Research Institute"
+            }
+        ]
+    },
+    {
+        "id": "Education",
+        "value": [
+            {
+                "span": "2019 - 2023",
+                "value": "B.Tech Computer Science at VIT University, Vellore"
+            },
+            {
+                "span": "2019",
+                "value": "12th Standard in Physics, Chemistry & Mathematics"
+            },
+            {
+                "span": "2017",
+                "value": "10th Standard"
+            }
+        ]
+    },
+    {
+        "id": "Certifications",
+        "value": [
+            {
+                "span": "AWS Certified Cloud Practitioner",
+                "value": "2021 - 2024"
+            },
+            {
+                "span": "Cybersecurity Essentials",
+                "value": "by Cisco"
+            }
+        ]
+    }
+]
