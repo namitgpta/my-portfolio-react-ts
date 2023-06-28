@@ -30,6 +30,22 @@ export const Form = ({ onSubmit }: FormProps) => {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     onSubmit(formData);
+    const config = {
+      Username: "namitgpta24@gmail.com",
+      Password: "0B89DED1B2083CF7138B99EF2B114B476201",
+      Host: "smtp.elasticemail.com",
+      Port: 2525,
+      To: "namitgpta24@gmail.com",
+      From: formData.email,
+      Subject: `Portfolio Contact by ${formData.name}`,
+      Body: `${formData.name}\n\n${formData.message}`,
+    };
+    
+    if (window.Email) {
+      window.Email.send(config).then((msg: string) =>
+        console.log("Email Sent Successfully!!" + msg)
+      );
+    }
   }
 
   return (
@@ -56,8 +72,6 @@ export const Form = ({ onSubmit }: FormProps) => {
         onChange={handleInputChange}
         required
       />
-      {/* </label> */}
-      {/* <br /> */}
       <textarea
         name="Message"
         rows={6}
