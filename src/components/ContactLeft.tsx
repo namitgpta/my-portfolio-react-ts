@@ -9,16 +9,32 @@ export const ContactLeft = () => {
       </p>
       {/* <p><i className="fas fa-phone-square-alt"></i>0987654321</p> */}
       <div className="social-icons">
-        <a href="https://facebook.com/namitg677" target="_blank">
+        <a
+          href="https://facebook.com/namitg677"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className="fab fa-facebook"></i>
         </a>
-        <a href="https://twitter.com/namitg677" target="_blank">
+        <a
+          href="https://twitter.com/namitg677"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className="fab fa-twitter-square"></i>
         </a>
-        <a href="https://www.instagram.com/namit.gupta24/" target="_blank">
+        <a
+          href="https://www.instagram.com/namit.gupta24/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className="fab fa-instagram"></i>
         </a>
-        <a href="https://linkedin.com/in/namitgpta" target="_blank">
+        <a
+          href="https://linkedin.com/in/namitgpta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className="fab fa-linkedin"></i>
         </a>
       </div>
@@ -27,6 +43,7 @@ export const ContactLeft = () => {
         download
         className="btn btn2"
         target="_blank"
+        rel="noopener noreferrer"
       >
         Download CV
       </a>

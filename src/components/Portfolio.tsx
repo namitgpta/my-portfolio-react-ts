@@ -42,7 +42,7 @@ export const Portfolio = () => {
                 <div className="layer">
                   <h3>{data.heading}</h3>
                   <p>{data.description}</p>
-                  <a href={data.url} target="_blank">
+                  <a href={data.url} target="_blank" rel="noopener noreferrer">
                     <i className="fas fa-external-link-alt"></i>
                   </a>
                 </div>
