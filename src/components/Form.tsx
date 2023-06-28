@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import "./styles.css";
 
 interface FormProps {
@@ -12,6 +13,8 @@ export interface FormData {
 }
 
 export const Form = ({ onSubmit }: FormProps) => {
+  const form = useRef<HTMLFormElement>(null);
+
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -24,56 +27,61 @@ export const Form = ({ onSubmit }: FormProps) => {
       | React.ChangeEvent<HTMLTextAreaElement>
   ) {
     const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prevFormData) => {
+      return {
+        ...prevFormData,
+        [name]: value,
+      };
+    });
   }
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     onSubmit(formData);
-    const config = {
-      Username: "namitgpta24@gmail.com",
-      Password: "0B89DED1B2083CF7138B99EF2B114B476201",
-      Host: "smtp.elasticemail.com",
-      Port: 2525,
-      To: "namitgpta24@gmail.com",
-      From: formData.email,
-      Subject: `Portfolio Contact by ${formData.name}`,
-      Body: `${formData.name}\n\n${formData.message}`,
-    };
-    
-    if (window.Email) {
-      window.Email.send(config).then((msg: string) =>
-        console.log("Email Sent Successfully!!" + msg)
-      );
+
+    const formElement = form.current;
+    if (!formElement) {
+      console.log("Form element is null");
+      return;
     }
+
+    emailjs
+      .sendForm(
+        "service_ov7omlf", // service ID
+        "template_7km1uf8", // template ID
+        formElement, // form element
+        "xCqj68TisgeLUvPFm" // user ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      {/* <label>
-        Name: */}
+    <form onSubmit={handleSubmit} ref={form}>
       <input
         type="text"
-        name="Name"
+        name="name"
         placeholder="Your Name"
         value={formData.name}
         onChange={handleInputChange}
         required
       />
-      {/* </label> */}
-      {/* <br /> */}
-      {/* <label>
-        Age: */}
       <input
         type="email"
-        name="Email"
+        name="email"
         placeholder="Your Email"
         value={formData.email}
         onChange={handleInputChange}
         required
       />
       <textarea
-        name="Message"
+        name="message"
         rows={6}
         placeholder="Your Message"
         value={formData.message}
