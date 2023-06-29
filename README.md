@@ -1,3 +1,3 @@
-Namit's Portfolio Website
+# Namit's Portfolio Website
 
 Made with React & Typescript.
