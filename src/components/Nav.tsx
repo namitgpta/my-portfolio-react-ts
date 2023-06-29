@@ -3,7 +3,7 @@ import "./styles.css";
 import { useState } from "react";
 
 export const Nav = () => {
-  const [rightStyleValue, setRightStyleValue] = useState("0");
+  const [rightStyleValue, setRightStyleValue] = useState("-200px");
 
   const navArr: { key: string; value: string }[] = [
     { key: "#header", value: "Home" },
@@ -14,10 +14,10 @@ export const Nav = () => {
   ];
 
   const closeMenu = () => {
-    setRightStyleValue("0");
+    setRightStyleValue("-200px");
   };
   const openMenu = () => {
-    setRightStyleValue("-200px");
+    setRightStyleValue("0");
   };
 
   return (
