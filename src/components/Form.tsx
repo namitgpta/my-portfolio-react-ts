@@ -52,10 +52,10 @@ export const Form = ({ onSubmit }: FormProps) => {
 
     emailjs
       .sendForm(
-        "service_ov7omlf", // service ID
-        "template_7km1uf8", // template ID
+        process.env.REACT_APP_EMAILJS_SERVICE_ID ?? "not found", // service ID
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID ?? "not found", // template ID
         formElement, // form element
-        "xCqj68TisgeLUvPFm" // user ID
+        process.env.REACT_APP_EMAILJS_USER_ID ?? "not found" // user ID
       )
       .then(
         (result) => {
