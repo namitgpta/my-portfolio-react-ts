@@ -5,7 +5,14 @@ export const ContactLeft = () => {
     <div className="contact-left">
       <h1 className="sub-title">Contact Me</h1>
       <p>
-        <i className="fas fa-paper-plane"></i>namitg677@gmail.com
+        <a
+          href="mailto:namitg677@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fas fa-paper-plane"></i>
+        </a>
+        namitg677@gmail.com
       </p>
       {/* <p><i className="fas fa-phone-square-alt"></i>0987654321</p> */}
       <div className="social-icons">
@@ -45,7 +52,7 @@ export const ContactLeft = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Download CV
+        Download Resume
       </a>
     </div>
   );

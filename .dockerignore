@@ -19,3 +19,4 @@ yarn-error.log*
 pre-commit-setup.sh
 .git
 README.md
+.netlify

@@ -21,6 +21,7 @@ export const About = () => {
       <div className="container">
         <div className="row">
           <div className="about-col-1">
+            <h1 className="sub-title">About Me</h1>
             <img src="./images/user.jpg" alt="Namit Gupta" />
           </div>
           <div className="about-col-2">
