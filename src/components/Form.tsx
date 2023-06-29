@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "./styles.css";
+import LoadingIcons from "react-loading-icons";
 
 interface FormProps {
   onSubmit: (data: FormData) => void;
@@ -21,6 +22,8 @@ export const Form = ({ onSubmit }: FormProps) => {
     message: "",
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+
   function handleInputChange(
     event:
       | React.ChangeEvent<HTMLInputElement>
@@ -38,6 +41,8 @@ export const Form = ({ onSubmit }: FormProps) => {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     onSubmit(formData);
+    setIsLoading(true);
+    document.getElementById("emailMsg")!.style.display = "none";
 
     const formElement = form.current;
     if (!formElement) {
@@ -55,9 +60,18 @@ export const Form = ({ onSubmit }: FormProps) => {
       .then(
         (result) => {
           console.log(result.text);
+          setIsLoading(false);
+          document.getElementById("emailMsg")!.innerHTML =
+            "Email Sent to Namit !!";
+          document.getElementById("emailMsg")!.style.display = "block";
         },
         (error) => {
           console.log(error.text);
+          setIsLoading(false);
+          document.getElementById("emailMsg")!.innerHTML =
+            "Error Sending Email !!";
+          document.getElementById("emailMsg")!.style.display = "block";
+          document.getElementById("emailMsg")!.style.color = "red";
         }
       );
   }
@@ -91,6 +105,9 @@ export const Form = ({ onSubmit }: FormProps) => {
       <button type="submit" className="btn btn2">
         Submit
       </button>
+      <LoadingIcons.Bars
+        className={isLoading ? "loading formLoading" : "loading formNotLoading"}
+      />
     </form>
   );
 };

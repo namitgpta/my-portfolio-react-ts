@@ -385,6 +385,28 @@ nav .fas {
     display: none;
 }
 
+#emailMsg {
+    color: #61b752;
+    margin-top: -20px;
+    display: none;
+}
+
+.loading {
+    position: absolute;
+    margin-left: 15px;
+    width: 50px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.formLoading {
+    display: inline-block;
+}
+
+.formNotLoading {
+    display: none;
+}
+
 /* ---------css for small screens------- */
 @media only screen and (max-width: 600px) {
     .logo {
@@ -464,10 +486,4 @@ nav .fas {
     .copyright {
         font-size: 14px;
     }
-}
-
-#msg {
-    color: #61b752;
-    margin-top: -40px;
-    display: block;
 }

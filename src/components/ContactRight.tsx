@@ -10,7 +10,7 @@ export const ContactRight = () => {
   return (
     <div className="contact-right">
       <Form onSubmit={handleSubmit} />
-      <span id="msg">Email Sent Successfully !!</span>
+      <span id="emailMsg"></span>
     </div>
   );
 };
