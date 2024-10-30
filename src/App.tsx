@@ -4,7 +4,7 @@ import { Contact } from "./components/Contact";
 import { Copyright } from "./components/Copyright";
 import { Header } from "./components/Header";
 import { Portfolio } from "./components/Portfolio";
-import { Services } from "./components/Services";
+// import { Services } from "./components/Services";
 
 function App() {
   return (
