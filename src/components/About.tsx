@@ -29,8 +29,7 @@ export const About = () => {
             <p>
               I'm a Computer Science 2023 Graduate from VIT University, Vellore.
               <br />
-              Currently working as SDE Intern at BYJU'S, India's largest ed-tech
-              company.
+              Currently working as a Software Engineer at Qualcomm.
             </p>
             <div className="tab-titles">
               {tabLinksArr.map((data) => {

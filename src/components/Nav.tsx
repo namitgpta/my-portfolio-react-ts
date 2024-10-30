@@ -8,7 +8,7 @@ export const Nav = () => {
   const navArr: { key: string; value: string }[] = [
     { key: "#header", value: "Home" },
     { key: "#about", value: "About" },
-    { key: "#portfolio", value: "Portfolio" },
+    { key: "#portfolio", value: "Projects" },
     // { key: "#services", value: "Services" },
     { key: "#contact", value: "Contact" },
   ];
