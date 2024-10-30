@@ -9,7 +9,7 @@ export const Nav = () => {
     { key: "#header", value: "Home" },
     { key: "#about", value: "About" },
     { key: "#portfolio", value: "Portfolio" },
-    { key: "#services", value: "Services" },
+    // { key: "#services", value: "Services" },
     { key: "#contact", value: "Contact" },
   ];
 
