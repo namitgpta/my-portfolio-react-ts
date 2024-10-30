@@ -3,24 +3,24 @@
         "id": "Skills",
         "value": [
             {
-                "span": "Devops & SRE",
-                "value": "Infrastructure Development, Operations & Reliability"
-            },
-            {
-                "span": "Web Development",
-                "value": "MERN Stack"
-            },
-            {
-                "span": "App Development",
-                "value": "Building Android Apps using Java in Android Studio"
+                "span": "Programming Languages",
+                "value": "C, C++, Arm Assembly, Java, Python, JS"
             },
             {
                 "span": "DSA",
                 "value": "Problem Solving using Data Structures & Algorithms"
             },
             {
-                "span": "Programming Languages",
-                "value": "C, C++, Java, Python, JS, Go"
+                "span": "App Development",
+                "value": "Building Android Apps using Java in Android Studio"
+            },
+            {
+                "span": "Devops",
+                "value": "AWS Cloud, Logging, Monitoring, Deployments and Security"
+            },
+            {
+                "span": "Web Development",
+                "value": "Beginner level development using Node.js & React"
             }
         ]
     },
@@ -28,16 +28,20 @@
         "id": "Experience",
         "value": [
             {
-                "span": "09/2022 - Present",
-                "value": "MTS Intern at BYJU'S (Devops & SRE Team)"
+                "span":"12/2023 - Present",
+                "value": "Associate Engineer at Qualcomm - CPU Performance Team"
             },
             {
-                "span": "03/2021 - 05/2021",
-                "value": "Open Source Developer at GirlScript Summer of Code"
+                "span": "10/2023 - 12/2023",
+                "value": "MTS-1 at Byju's - Devops & SRE Team"
+            },
+            {
+                "span": "09/2022 - 09/2023",
+                "value": "MTS Intern at Byju's - Devops & SRE Team"
             },
             {
                 "span": "10/2020 - 03/2021",
-                "value": "R&D Intern at Samsung Research Institute"
+                "value": "Research Intern at Samsung R&D Institute India"
             }
         ]
     },

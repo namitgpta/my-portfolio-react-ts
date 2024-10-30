@@ -17,21 +17,21 @@ export const ContactLeft = () => {
       {/* <p><i className="fas fa-phone-square-alt"></i>0987654321</p> */}
       <div className="social-icons">
         <a
-          href="https://facebook.com/namitg677"
+          href="https://facebook.com/namitgpta"
           target="_blank"
           rel="noopener noreferrer"
         >
           <i className="fab fa-facebook"></i>
         </a>
         <a
-          href="https://twitter.com/namitg677"
+          href="https://twitter.com/namitgpt"
           target="_blank"
           rel="noopener noreferrer"
         >
           <i className="fab fa-twitter-square"></i>
         </a>
         <a
-          href="https://www.instagram.com/namit.gupta24/"
+          href="https://www.instagram.com/namitgpta"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -52,7 +52,7 @@ export const ContactLeft = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Download Resume
+        View Resume
       </a>
     </div>
   );
