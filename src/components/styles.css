@@ -155,7 +155,7 @@ nav ul li a:hover::after {
 
 .tab-contents ul li {
     list-style: none;
-    margin: 10px 0;
+    margin: 8px 0;
     font-size: 15px;
     margin-right: 20px;
 }
