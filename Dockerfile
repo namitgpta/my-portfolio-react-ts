@@ -4,7 +4,7 @@ WORKDIR /app
 # copy package.json and package-lock.json to the container
 COPY package*.json ./
 # install dependencies
-RUN yarn install --production && yarn cache clean
+RUN npm ci
 # copy all the files from the current directory to the container
 COPY . .
 
@@ -18,8 +18,8 @@ ENV VITE_EMAILJS_USER_ID=$VITE_EMAILJS_USER_ID
 ENV VITE_FONT_AWESOME_URL=$VITE_FONT_AWESOME_URL
 
 # build the app
-RUN yarn build
+RUN npm run build
 
 # serve the static build
-RUN yarn global add serve
+RUN npm install -g serve
 CMD ["serve", "-s", "dist"]
