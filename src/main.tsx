@@ -4,6 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Load Font Awesome dynamically from env
+const fontAwesomeUrl = import.meta.env.VITE_FONT_AWESOME_URL;
+if (fontAwesomeUrl) {
+  const script = document.createElement('script');
+  script.src = fontAwesomeUrl;
+  script.crossOrigin = 'anonymous';
+  document.head.appendChild(script);
+}
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
